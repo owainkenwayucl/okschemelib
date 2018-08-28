@@ -1,0 +1,10 @@
+; Range from b to n with step j
+(defun range (b n j)
+   (do ((i b (+ i j))) ((>= i n))
+      (if (typep b 'LIST)
+          (setq b (cons i b))
+          (setq b (list i))
+      )
+   ) 
+   (reverse b)
+)
