@@ -17,14 +17,14 @@
 )
 
 ; check to see if string s ends with string e
-(define (okendswith? s e)
+(define (endswith? s e)
 	(if (> (string-length s) (string-length e))
 		(string=? e (substring s (- (string-length s) (string-length e)) (string-length s) ))
 	)
 )
 
 ; check to see if string s ends with string e (case insensitive)
-(define (okendswith-ci? s e)
+(define (endswith-ci? s e)
 	(if (> (string-length s) (string-length e))
 		(string-ci=? e (substring s (- (string-length s) (string-length e)) (string-length s) ))
 	)

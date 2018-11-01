@@ -25,3 +25,7 @@ T
 (1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5)
 [3]> 
 ```
+
+There is now a third version, for xlisp 2.1 on Macintosh in `OKLIB.LSP`, containing functions missing from xlisp, specifically `range`.
+
+All implentations include some functions for checking to see if a string ends with or starts with another string (varies by implementation).

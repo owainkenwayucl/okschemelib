@@ -9,7 +9,7 @@
 (defun okmap (f d) (loop for a in d collect (funcall f a)))
 
 ; check to see if string s ends with string e
-(defun okendswith? (s e) (if (> (length s) (length e)) (string= e (subseq s (- (length s) (length e)) (length s) ))))
+(defun endswith? (s e) (if (> (length s) (length e)) (string= e (subseq s (- (length s) (length e)) (length s) ))))
 
 ; check to see if string s ends with string e (case insensitive)
-(defun okendswith-ci? (s e) (if (> (length s) (length e)) (string-equal e (subseq s (- (length s) (length e)) (length s) ))))
+(defun endswith-ci? (s e) (if (> (length s) (length e)) (string-equal e (subseq s (- (length s) (length e)) (length s) ))))
