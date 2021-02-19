@@ -30,6 +30,14 @@
 	)
 )
 
+; This always rounds .5 up rather than away from zero
+;(define (okround x)
+;	(floor (+ x 0.5))
+;)
+
 (define (okround x)
-	(floor (+ x 0.5))
+	(if (>= x 0) 
+		(floor (+ x 0.5))
+		(* -1 (floor (+ (* -1 x) 0.5)))
+	)
 ) 

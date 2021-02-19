@@ -16,4 +16,8 @@
 
 ; "correct" round
 ; We add zero to get only the result, not the (now incorrect) remainder
-(defun okround (x) (+ 0.0 (floor (+ x 0.5))))
+
+(defun okround (x) (+ 0 (if (>= x 0) (floor (+ x 0.5)) (* -1 (floor (+ (* -1 x) 0.5))))))
+
+; This always rounds .5 up rather than away from zero.
+;(defun okround (x) (+ 0.0 (floor (+ x 0.5))))

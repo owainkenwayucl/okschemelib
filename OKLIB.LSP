@@ -40,5 +40,8 @@
 
 ; "Correct" rounding
 (defun okround (x)
-   (+ 0.0 (floor (+ x 0.5)))
+   (if (>= x 0) 
+       (+ 0.0 (floor (+ x 0.5)))
+       (* -1 (+ 0.0 (floor (+ (* -1 x) 0.5))))
+   )
 )
