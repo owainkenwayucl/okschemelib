@@ -30,3 +30,6 @@
 	)
 )
 
+(define (okround x)
+	(floor (+ x 0.5))
+) 

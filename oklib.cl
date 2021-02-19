@@ -13,3 +13,7 @@
 
 ; check to see if string s ends with string e (case insensitive)
 (defun endswith-ci? (s e) (if (> (length s) (length e)) (string-equal e (subseq s (- (length s) (length e)) (length s) ))))
+
+; "correct" round
+; We add zero to get only the result, not the (now incorrect) remainder
+(defun okround (x) (+ 0.0 (floor (+ x 0.5))))
