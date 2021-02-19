@@ -37,3 +37,8 @@
       (string-equal s e :start1 (- (length s) (length e)) :end1 (length s))
    )
 )
+
+; "Correct" rounding
+(defun okround (x)
+   (+ 0.0 (floor (+ x 0.5)))
+)
